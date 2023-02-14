@@ -1,0 +1,70 @@
+@use './config/variables';
+
+.countdown{
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__item{
+        margin: 15px;
+        position: relative;
+        box-shadow: 10px 10px 30px lighten(#000, 5%);
+        background-color: variables.$midnigthLigth;
+
+        &::after{
+            content: "";
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(#fff, .2);
+            transition: width ease 1s;
+        }
+
+        &--primary{
+            &::after{
+                width: 100%;
+                transition: width ease 1s;
+            }
+        }
+    }
+
+    &__box{
+        text-align: center;
+    }
+    
+    &__time{
+        font-size: 48px;
+        font-weight: bold;
+        color: variables.$textColor;
+        display: block;
+        padding: 24px;
+    }
+
+    &__details{
+        padding: 8px 16px;
+        background-color: variables.$details;
+
+        &__name{
+            font-size: 24px;
+            font-weight: bold;
+            color: variables.$textColor;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 425px) {
+        .container{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
