@@ -3,12 +3,16 @@
 @use './config/variables';
 @use './countdown';
 
+body{
+    height: 100vh;
+}
+
 main{
+    height: 100%;
     background-color: variables.$midnigth;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     position: relative;
     overflow: scroll;
 }
