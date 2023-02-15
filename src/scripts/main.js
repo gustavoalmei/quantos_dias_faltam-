@@ -1,8 +1,16 @@
 const btnClose = document.querySelector('#btnClose');
+const modalCelebrate = document.querySelector('.celebrate');
+let celebrate = false;
 
+window.addEventListener('load', function(e){
+    if(!modalCelebrate.classList.contains('modal--is-hidden')){
+        console.log(e)
+    }
+})
 
 btnClose.addEventListener('click', function(){
-    document.querySelector('.modal').classList.add('modal--is-hidden');
+    document.querySelector('.message').classList.add('modal--is-hidden');
+    
 });
 
 function refreshTime(){
@@ -11,7 +19,7 @@ function refreshTime(){
     let spanMinute = document.querySelector('.time__minutes');
     let spanSecond = document.querySelector('.time__seconds');
     let now = new Date().getTime();
-    let dateBirthday = new Date("Feb 12 2023 00:00:00").getTime();
+    let dateBirthday = new Date("Feb 15 2023 13:21:00").getTime();
     let calc = dateBirthday - now;
     let calcTime = {
         day: 1000 * 60 * 60 * 24,
@@ -38,12 +46,22 @@ function refreshTime(){
     spanMinute.textContent = timeFormat.minute;
     spanSecond.textContent = timeFormat.seconds;
 
-    if(calc){
+    if(calc < 0){
         spanDay.textContent = '0';
         spanHour.textContent = '0';
         spanMinute.textContent = '0';
         spanSecond.textContent = '0';
+        celebrate = true;
+        if(celebrate){
+            modalCelebrate.classList.remove('modal--is-hidden')
+        }
     }
 }
-setInterval(refreshTime, 1000);
 
+function changeTheme(){
+    let item = document.querySelectorAll(".countdown__item")
+
+    console.log(item)
+}
+
+setInterval(refreshTime, 1000);

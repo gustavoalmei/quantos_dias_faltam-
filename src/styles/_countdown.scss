@@ -20,13 +20,12 @@
             top: 0;
             left: 0;
             background-color: rgba(#fff, .2);
-            transition: width ease 1s;
         }
 
         &--primary{
             &::after{
                 width: 100%;
-                transition: width ease 1s;
+                transition: width ease .5s;
             }
         }
     }
