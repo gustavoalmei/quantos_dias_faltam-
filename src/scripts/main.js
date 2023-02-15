@@ -13,7 +13,7 @@ function refreshTime(){
     let spanMinute = document.querySelector('.time__minutes');
     let spanSecond = document.querySelector('.time__seconds');
     let now = new Date().getTime();
-    let dateBirthday = new Date("Dec 15 2023 14:45:00").getTime();
+    let dateBirthday = new Date("Dec 15 2023 00:00:00").getTime();
     let calc = dateBirthday - now;
     let calcTime = {
         day: 1000 * 60 * 60 * 24,
