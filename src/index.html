@@ -16,9 +16,19 @@
         <div class="container">
             <div class="modal">
                 <div class="modal__item">
-                    <div class="modal__item__header"></div>
+                    <div class="modal__item__header">
+                        <h1>Quantos dias faltam para o aniversário desse futuro devinho?</h1>
+                    </div>
                     <div class="modal__item__content">
-                        
+                        <p>
+                            Opaa, bom dia/boa tarde/boa noite pessoa que está acessando este site. Já pode ir pensando no que me dar de presente, aceito dinheirinhos como presente, mas também uma vaguinha em um time hein hehehe.
+                        </p>
+                        <p>
+                            A data do meu aniversário é 15/12, mas vamos ver quantos dias faltam até lá.
+                        </p>
+                    </div>
+                    <div class="modal__item__footer">
+                        <a href="#" class="button" id="btnClose">Vamos lá!</a>
                     </div>
                 </div>
             </div>
@@ -27,15 +37,15 @@
                 <div class="container">
                     <div class="countdown__item">
                         <div class="countdown__box">
-                            <span class="countdown__time">10d</span>
+                            <span class="countdown__time time__days">10</span>
                             <div class="countdown__details">
                                 <p class="countdown__details__name">Dias</p>
                             </div>
                         </div>
                     </div>
-                    <div class="countdown__item countdown__item--primary">
-                        <div class="countdown__box countdown__box--primary">
-                            <span class="countdown__time">10h</span>
+                    <div class="countdown__item">
+                        <div class="countdown__box">
+                            <span class="countdown__time time__hours">10</span>
                             <div class="countdown__details">
                                 <p class="countdown__details__name">Horas</p>
                             </div>
@@ -43,7 +53,7 @@
                     </div>
                     <div class="countdown__item">
                         <div class="countdown__box">
-                            <span class="countdown__time">12m</span>
+                            <span class="countdown__time time__minutes">12</span>
                             <div class="countdown__details">
                                 <p class="countdown__details__name">Minutos</p>
                             </div>
@@ -51,7 +61,7 @@
                     </div>
                     <div class="countdown__item">
                         <div class="countdown__box">
-                            <span class="countdown__time">50s</span>
+                            <span class="countdown__time time__seconds">50</span>
                             <div class="countdown__details">
                                 <p class="countdown__details__name">Segundos</p>
                             </div>
@@ -61,7 +71,17 @@
             </div>
         </div>
     </main>
-
+    <div id="tsparticles "></div>
     <script src="./scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9/tsparticles.confetti.bundle.min.js"></script>
+    <script type="text/javascript">
+        tsParticles.load("tsparticles", {
+            particles:{
+                number:{
+                    value: 100,
+                }
+            }
+        })
+    </script>
 </body>
 </html>

@@ -9,10 +9,28 @@ main{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
+}
+
+#confetti-canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .container{
     max-width: 1024px;
     width: 100%;
     margin: auto;
+}
+
+.button{
+    padding: 16px;
+    font-size: 24px;
+    text-decoration: none;
+    border: 1px solid #000;
+    color: variables.$textColor;
+    border-radius: 10px;
 }

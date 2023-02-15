@@ -9,7 +9,7 @@
     &__item{
         margin: 15px;
         position: relative;
-        box-shadow: 10px 10px 30px lighten(#000, 5%);
+        box-shadow: 25px 30px 35px rgba(0, 0, 0, 0.5);
         background-color: variables.$midnigthLigth;
 
         &::after{
@@ -36,15 +36,15 @@
     }
     
     &__time{
-        font-size: 48px;
+        font-size: 52px;
         font-weight: bold;
         color: variables.$textColor;
         display: block;
-        padding: 24px;
+        padding: 28px;
     }
 
     &__details{
-        padding: 8px 16px;
+        padding: 16px 18px;
         background-color: variables.$details;
 
         &__name{
