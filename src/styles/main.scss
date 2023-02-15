@@ -14,7 +14,6 @@ main{
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 24px;
 }
 
 #confetti-canvas{
@@ -29,6 +28,7 @@ main{
     max-width: 1024px;
     width: 100%;
     margin: auto;
+    padding: 16px;
 }
 
 .button{
