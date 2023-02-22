@@ -1,7 +1,8 @@
 @use './config/reset';
-@use './modal';
+@use './_modal';
 @use './config/variables';
-@use './countdown';
+@use './_countdown';
+@use './_message';
 
 body{
     height: 100vh;
